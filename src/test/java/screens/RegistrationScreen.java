@@ -1,7 +1,6 @@
 package screens;
 
 import helpers.RandomGenerator;
-import helpers.SwipeDirections;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -24,7 +23,7 @@ public class RegistrationScreen extends AbstractScreen {
     By okButton = By.id("android:id/button1");
     By profileCreatedApprovalButton = By.id("confirm_button");
 
-    public void register() {
+    public void register() throws InterruptedException {
         setUsers();
         waitUntil(visibilityOfElementLocated(fullNameField));
         isDisplayed(fullNameField);
@@ -34,6 +33,7 @@ public class RegistrationScreen extends AbstractScreen {
         waitUntil(visibilityOfElementLocated(sizeField));
         waitAndSetValue(sizeField, users.getSize());
         click(createAccountButton);
+        Thread.sleep(2000);
         waitUntil(visibilityOfElementLocated(profileCreatedApprovalButton));
         click(profileCreatedApprovalButton);
     }
@@ -52,7 +52,6 @@ public class RegistrationScreen extends AbstractScreen {
     }
 
     public void selectYear() {
-        swipeInDirection(SwipeDirections.UP);
         List<WebElement> element = driver.findElements(By.xpath("//android.widget.ListView/android.widget.TextView"));
         clickRandomElement(element);
     }

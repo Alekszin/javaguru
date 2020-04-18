@@ -11,7 +11,7 @@ public class RegistrationStepdefs {
 
 
     @Given("user should be able to register an account")
-    public void stepDefchik() {
+    public void registrationStepDef() throws InterruptedException {
         onboardingScreen.setUp();
         onboardingScreen.skipOnboarding(4);
         registrationScreen.register();

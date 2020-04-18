@@ -6,7 +6,6 @@ import org.junit.Assert;
 import screens.MainScreen;
 
 
-
 public class MainStepdefs {
 
     MainScreen mainScreen = new MainScreen();
@@ -14,6 +13,7 @@ public class MainStepdefs {
     @Then("user should be logged in")
     public void userShouldBeLoggedIn() {
         mainScreen.profileIsDisplayed();
+        mainScreen.quit();
     }
 
     @Given("user creates an exercise")
@@ -24,5 +24,6 @@ public class MainStepdefs {
     @Then("exercises should be created")
     public void exercisesShouldBeCreated() {
         Assert.assertTrue(mainScreen.exerciseIsDisplayed());
+        mainScreen.quit();
     }
 }

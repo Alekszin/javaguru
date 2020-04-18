@@ -1,19 +1,13 @@
 package screens;
 
 import helpers.Exercises;
-import helpers.SwipeDirections;
 import helpers.Users;
-import io.appium.java_client.PerformsTouchActions;
-import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-import io.appium.java_client.touch.WaitOptions;
-import io.appium.java_client.touch.offset.PointOption;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.joda.time.Duration;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
@@ -130,38 +124,5 @@ public class AbstractScreen {
 
     public void waitAndSetValue(By by, String text) {
         setValue(by, text);
-    }
-
-
-    public void swipeInDirection(SwipeDirections direction) {
-        Dimension screenSize = driver.manage().window().getSize();
-        int scrollStart;
-        int offset;
-        int duration = 2000;
-        int startx = (int) (screenSize.width * 0.5);
-
-        switch (direction) {
-            case DOWN:
-                scrollStart = (int) (screenSize.height * 0.7);
-                offset = (int) (screenSize.height * 0.5);
-                swipe(startx, scrollStart, 0, -offset, duration);
-                break;
-            case UP:
-                scrollStart = (int) (screenSize.height * 0.2);
-                offset = (int) (screenSize.height * 0.3);
-                swipe(startx, scrollStart, 0, offset, duration);
-                break;
-            default:
-                throw new IllegalArgumentException("Direction is not allowed");
-        }
-    }
-
-    private void swipe(int startX, int startY, int xOffset, int yOffset, int duration) {
-        (new TouchAction((PerformsTouchActions) driver))
-                .press(PointOption.point(startX, startY))
-                .waitAction(WaitOptions.waitOptions(java.time.Duration.ofMillis(duration)))
-                .moveTo(PointOption.point(startX - xOffset, startY + yOffset))
-                .release()
-                .perform();
     }
 }

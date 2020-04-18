@@ -25,6 +25,7 @@ public class MainScreen extends AbstractScreen {
 
     public void createExercise() {
         exercise.setExercise(random.randomString());
+        waitUntil(visibilityOfElementLocated(exerciseNameField));
         waitAndSetValue(exerciseNameField, exercise.getExercise());
         waitAndSetValue(setsInputField, random.randomInt());
         waitAndSetValue(repetitionInputField, random.randomInt());
@@ -36,7 +37,6 @@ public class MainScreen extends AbstractScreen {
 
     public boolean exerciseIsDisplayed() {
         By exerciseName = By.xpath("//android.widget.TextView[@text='" + exercise.getExercise() + "']");
-        System.out.println(exercise.getExercise());
         return isDisplayed(exerciseName);
     }
 }
