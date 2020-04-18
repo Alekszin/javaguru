@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'io.appium', name: 'java-client', version: '7.3.0'
+    testCompile group: 'org.awaitility', name: 'awaitility', version: '4.0.2'
+    compile group: 'io.cucumber', name: 'cucumber-jvm', version: '5.6.0', ext: 'pom'
+    compile group: 'io.cucumber', name: 'cucumber-java', version: '5.6.0'
+    testCompile group: 'io.cucumber', name: 'cucumber-junit', version: '5.6.0'
+    testCompile group: 'io.cucumber', name: 'cucumber-picocontainer', version: '5.6.0'
+    testCompile group: 'org.projectlombok', name: 'lombok', version: '1.18.12'
+}
