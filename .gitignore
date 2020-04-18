@@ -25,3 +25,5 @@ hs_err_pid*
 .build
 out/test/classes/generated_tests/
 src/main/
+build/generated/
+build/tmp/compileTestJava/
