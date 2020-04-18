@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Exercise related tests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-18T23:49:58" hostname="Alexandro.local" time="28.421">
+  <properties/>
+  <testcase name="user should be able to create new exercises" classname="Exercise related tests" time="28.421"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Apr 19, 2020 2:50:06 AM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>

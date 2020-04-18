@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="users should be able to register" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-18T23:50:27" hostname="Alexandro.local" time="21.594">
+  <properties/>
+  <testcase name="user is registering an account" classname="users should be able to register" time="21.594"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Apr 19, 2020 2:50:34 AM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
