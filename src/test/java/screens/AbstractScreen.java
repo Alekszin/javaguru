@@ -6,10 +6,9 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import org.joda.time.Duration;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -56,6 +55,19 @@ public class AbstractScreen {
     @After
     public void quit() {
         driver.quit();
+    }
+
+    @After
+    public void embedScreenshot(Scenario scenario) {
+        if (scenario.isFailed()) {
+            try {
+                byte[] screenshot = ((TakesScreenshot) driver)
+                        .getScreenshotAs(OutputType.BYTES);
+                scenario.embed(screenshot, "image/png");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 

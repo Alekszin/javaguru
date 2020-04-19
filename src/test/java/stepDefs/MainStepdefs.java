@@ -1,5 +1,6 @@
 package stepDefs;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
@@ -25,5 +26,10 @@ public class MainStepdefs {
     public void exercisesShouldBeCreated() {
         Assert.assertTrue(mainScreen.exerciseIsDisplayed());
         mainScreen.quit();
+    }
+
+    @And("user opens side menu")
+    public void userOpensSideMenu() {
+        mainScreen.openSideMenu();
     }
 }

@@ -5,25 +5,32 @@ pipeline {
     gradle "Gradle"
   }
 
+  stages {
+    stage('Build apk') {
+      steps {
+        echo './gradlew permission denied :('
+      }
+    }
+
     stage('Run test') {
       steps {
-        git 'git@github.com:Alekszin/javaguru.git'
+        g it 'git@github.com:Alekszin/javaguru.git'
         sh 'gradle build'
+        }
       }
     }
-  }
 
-  post {
-    always {
-      script {
-        allure([
-          includeProperties: false,
-          jdk: '',
-          properties: [],
-          reportBuildPolicy: 'ALWAYS',
-          results: [[path: 'allure-results']]
-        ])
+    post {
+      always {
+        script {
+          allure([
+            includeProperties: false,
+            jdk: '',
+            properties: [],
+            reportBuildPolicy: 'ALWAYS',
+            results: [[path: 'allure-results']]
+          ])
+        }
       }
     }
   }
-}

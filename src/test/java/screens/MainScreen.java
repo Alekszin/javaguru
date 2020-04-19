@@ -14,6 +14,7 @@ public class MainScreen extends AbstractScreen {
     By editPoidsInputField = By.id("editPoids");
     By addButton = By.id("addperff");
     By exitButton = By.id("btn_exit");
+    By sideMenuButton = By.xpath("//android.widget.ImageButton[@content-desc='Open navigation drawer']");
 
 
     RandomGenerator random = new RandomGenerator();
@@ -38,5 +39,10 @@ public class MainScreen extends AbstractScreen {
     public boolean exerciseIsDisplayed() {
         By exerciseName = By.xpath("//android.widget.TextView[@text='" + exercise.getExercise() + "']");
         return isDisplayed(exerciseName);
+    }
+
+    public void openSideMenu() {
+        waitUntil(visibilityOfElementLocated(sideMenuButton));
+        click(sideMenuButton);
     }
 }

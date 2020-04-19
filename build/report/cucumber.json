@@ -1,9 +1,9 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-04-18T23:49:59.107Z",
+        "start_timestamp": "2020-04-19T02:21:47.841Z",
         "line": 4,
         "name": "user should be able to create new exercises",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 20430000000,
+              "duration": 20316000000,
               "status": "passed"
             },
             "line": 5,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 6606000000,
+              "duration": 7799000000,
               "status": "passed"
             },
             "line": 6,
@@ -37,13 +37,317 @@
           },
           {
             "result": {
-              "duration": 1176000000,
+              "duration": 1449000000,
               "status": "passed"
             },
             "line": 7,
             "name": "exercises should be created",
             "match": {
               "location": "stepDefs.MainStepdefs.exercisesShouldBeCreated()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-04-19T02:22:17.761Z",
+        "line": 17,
+        "name": "user should be able to open side menu BODYTRACK",
+        "description": "",
+        "id": "exercise-related-tests;user-should-be-able-to-open-side-menu-\u003csidemenu\u003e;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 20361000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user should be able to register an account",
+            "match": {
+              "location": "stepDefs.RegistrationStepdefs.registrationStepDef()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1338000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user opens side menu",
+            "match": {
+              "location": "stepDefs.MainStepdefs.userOpensSideMenu()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2238000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user selects BODYTRACK option",
+            "match": {
+              "arguments": [
+                {
+                  "val": "BODYTRACK",
+                  "offset": 13
+                }
+              ],
+              "location": "stepDefs.SideMenuStepdefs.userSelectsBodyTrack(helpers.SideMenu)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1250000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "BODYTRACK should be displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "BODYTRACK",
+                  "offset": 0
+                }
+              ],
+              "location": "stepDefs.SideMenuStepdefs.sideMenuShouldBeDisplayed(helpers.SideMenu)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-04-19T02:22:42.967Z",
+        "line": 18,
+        "name": "user should be able to open side menu WEIGHTTRACK",
+        "description": "",
+        "id": "exercise-related-tests;user-should-be-able-to-open-side-menu-\u003csidemenu\u003e;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 19652000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user should be able to register an account",
+            "match": {
+              "location": "stepDefs.RegistrationStepdefs.registrationStepDef()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1342000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user opens side menu",
+            "match": {
+              "location": "stepDefs.MainStepdefs.userOpensSideMenu()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2282000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user selects WEIGHTTRACK option",
+            "match": {
+              "arguments": [
+                {
+                  "val": "WEIGHTTRACK",
+                  "offset": 13
+                }
+              ],
+              "location": "stepDefs.SideMenuStepdefs.userSelectsBodyTrack(helpers.SideMenu)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 694000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "WEIGHTTRACK should be displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "WEIGHTTRACK",
+                  "offset": 0
+                }
+              ],
+              "location": "stepDefs.SideMenuStepdefs.sideMenuShouldBeDisplayed(helpers.SideMenu)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-04-19T02:23:06.949Z",
+        "line": 19,
+        "name": "user should be able to open side menu SETTINGS",
+        "description": "",
+        "id": "exercise-related-tests;user-should-be-able-to-open-side-menu-\u003csidemenu\u003e;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 20011000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user should be able to register an account",
+            "match": {
+              "location": "stepDefs.RegistrationStepdefs.registrationStepDef()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1352000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user opens side menu",
+            "match": {
+              "location": "stepDefs.MainStepdefs.userOpensSideMenu()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2208000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user selects SETTINGS option",
+            "match": {
+              "arguments": [
+                {
+                  "val": "SETTINGS",
+                  "offset": 13
+                }
+              ],
+              "location": "stepDefs.SideMenuStepdefs.userSelectsBodyTrack(helpers.SideMenu)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 905000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "SETTINGS should be displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "SETTINGS",
+                  "offset": 0
+                }
+              ],
+              "location": "stepDefs.SideMenuStepdefs.sideMenuShouldBeDisplayed(helpers.SideMenu)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-04-19T02:23:31.439Z",
+        "line": 20,
+        "name": "user should be able to open side menu ABOUT",
+        "description": "",
+        "id": "exercise-related-tests;user-should-be-able-to-open-side-menu-\u003csidemenu\u003e;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 20322000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user should be able to register an account",
+            "match": {
+              "location": "stepDefs.RegistrationStepdefs.registrationStepDef()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1401000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user opens side menu",
+            "match": {
+              "location": "stepDefs.MainStepdefs.userOpensSideMenu()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2219000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user selects ABOUT option",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ABOUT",
+                  "offset": 13
+                }
+              ],
+              "location": "stepDefs.SideMenuStepdefs.userSelectsBodyTrack(helpers.SideMenu)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1116000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "ABOUT should be displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ABOUT",
+                  "offset": 0
+                }
+              ],
+              "location": "stepDefs.SideMenuStepdefs.sideMenuShouldBeDisplayed(helpers.SideMenu)"
             },
             "keyword": "Then "
           }
@@ -60,13 +364,22 @@
     "id": "exercise-related-tests",
     "keyword": "Feature",
     "uri": "file:src/test/resources/features/Exercises.feature",
-    "tags": []
+    "tags": [
+      {
+        "name": "@test",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   },
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-04-18T23:50:27.381Z",
+        "start_timestamp": "2020-04-19T02:23:56.512Z",
         "line": 4,
         "name": "user is registering an account",
         "description": "",
@@ -76,7 +389,7 @@
         "steps": [
           {
             "result": {
-              "duration": 20069000000,
+              "duration": 19623000000,
               "status": "passed"
             },
             "line": 5,
@@ -88,7 +401,7 @@
           },
           {
             "result": {
-              "duration": 1520000000,
+              "duration": 1498000000,
               "status": "passed"
             },
             "line": 6,
@@ -111,6 +424,15 @@
     "id": "users-should-be-able-to-register",
     "keyword": "Feature",
     "uri": "file:src/test/resources/features/Registration.feature",
-    "tags": []
+    "tags": [
+      {
+        "name": "@test",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]
