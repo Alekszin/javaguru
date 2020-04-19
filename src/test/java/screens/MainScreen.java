@@ -7,7 +7,6 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElem
 
 public class MainScreen extends AbstractScreen {
     By profileImage = By.id("imageProfile");
-    By profilePageButton = By.xpath("(//android.widget.LinearLayout)[9]");
     By exerciseNameField = By.id("editMachine");
     By setsInputField = By.id("editSerie");
     By repetitionInputField = By.id("editRepetition");
@@ -15,6 +14,9 @@ public class MainScreen extends AbstractScreen {
     By addButton = By.id("addperff");
     By exitButton = By.id("btn_exit");
     By sideMenuButton = By.xpath("//android.widget.ImageButton[@content-desc='Open navigation drawer']");
+
+//   chronoE - remove E, so test will stop failing
+    By chronoButton = By.id("action_chronoe");
 
 
     RandomGenerator random = new RandomGenerator();
@@ -44,5 +46,10 @@ public class MainScreen extends AbstractScreen {
     public void openSideMenu() {
         waitUntil(visibilityOfElementLocated(sideMenuButton));
         click(sideMenuButton);
+    }
+
+    public void openChronometer() {
+        waitUntil(visibilityOfElementLocated(chronoButton));
+        click(chronoButton);
     }
 }

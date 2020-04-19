@@ -32,4 +32,9 @@ public class MainStepdefs {
     public void userOpensSideMenu() {
         mainScreen.openSideMenu();
     }
+
+    @And("user opens chronometer")
+    public void userOpensChronometer() {
+        mainScreen.openChronometer();
+    }
 }
