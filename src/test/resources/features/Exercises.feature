@@ -18,4 +18,3 @@ Feature: Exercise related tests
       | WEIGHTTRACK |
       | SETTINGS    |
       | ABOUT       |
-
